@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shambhavi Chaturvedi - Experience</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb;
+      color: #2d3748;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #2b6cb0;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c5282;
+      text-align: center;
+    }
+    .job {
+      border-left: 4px solid #3182ce;
+      padding-left: 1rem;
+      margin-bottom: 3rem;
+    }
+    .job h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+      color: #2b6cb0;
+    }
+    .job .company {
+      font-weight: 600;
+      color: #4a5568;
+    }
+    .job .location-date {
+      font-size: 0.875rem;
+      color: #718096;
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #a0aec0;
+      margin: 4rem 0 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Shambhavi Chaturvedi</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Senior Manager, Marketing Mix Modeling (MMM) <span class="company">@ Circana LLC</span></h3>
+      <div class="location-date">New York, NY · Oct 2022 – Present</div>
+      <ul>
+        <li>Delivered insights on media effectiveness across retail, CPG, and liquor sectors by developing Marketing Mix Models (MMM) that informed client investment strategies and supported cross-channel optimization.</li>
+        <li>Reduced data errors by 98% and accelerated model development by streamlining third-party data integration (Amazon Ads, Google Ads, MULOC).</li>
+        <li>Analyzed YouTube ad effectiveness for Molson Coors Pilot Project, generating insights on demographics and purchase behavior; documented workflow to support team training.</li>
+        <li>Utilized advanced Excel and Unify to integrate and analyze media and sales data for Ferrero’s key brands, improving forecasting accuracy by 75%.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Marketing Analyst Intern <span class="company">@ Media Monks</span></h3>
+      <div class="location-date">New York, NY · May 2022 – Aug 2022</div>
+      <ul>
+        <li>Optimized campaign performance by analyzing content creator data for clients like YSL (Libre).</li>
+        <li>Developed CreatorIQ dashboards in collaboration with global teams, enhancing acquisition strategies.</li>
+        <li>Led product development for 20+ small businesses, improving marketing techniques and boosting sales by 30%.</li>
+      </ul>
+    </div>
+    <!-- Add more jobs similarly -->
+  </main>
+  <footer>© 2025 Shambhavi Chaturvedi · Built with 💻 + ☕</footer>
+</body>
+</html>
