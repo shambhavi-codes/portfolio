@@ -12,6 +12,7 @@
       background-color: #f8f8f8;
       color: #333;
     }
+
     header {
       background-color: #000;
       color: white;
@@ -20,21 +21,71 @@
       justify-content: space-between;
       align-items: center;
       font-size: 1.3rem;
+      position: relative;
     }
+
     header h1 {
       font-family: 'Lato', sans-serif;
       font-weight: 600;
       margin: 0;
       font-size: 2.3rem;
     }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
     nav a {
       color: white;
-      margin-left: 2rem;
       text-decoration: none;
       font-weight: 600;
       font-family: 'Lato', sans-serif;
       font-size: 1.15rem;
     }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #000;
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+        padding: 1rem 2rem;
+      }
+
+      nav a {
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    /* --- Keep your existing styles below --- */
     .hero {
       display: flex;
       align-items: center;
@@ -61,29 +112,34 @@
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
-    .work {
+
+    .work, .interests {
       padding: 4rem 3rem;
       text-align: center;
       max-width: 1000px;
       margin: 0 auto 4rem auto;
     }
-    .work h3 {
+
+    .work h3, .interests h3 {
       font-family: 'Lato', sans-serif;
       font-weight: 600;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .work p.subheading {
+
+    .work p.subheading, .interests p.subheading {
       color: #666;
       font-size: 1rem;
       margin-bottom: 3rem;
     }
-    .work-grid {
+
+    .work-grid, .interest-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
-    .work-item {
+
+    .work-item, .interest-item {
       background: white;
       padding: 2rem 1rem;
       border-radius: 10px;
@@ -91,75 +147,17 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
-    .work-item:hover {
+
+    .work-item:hover, .interest-item:hover {
       transform: scale(1.03);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     }
-    .work-item .icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: block;
-      text-align: center;
-    }
-    .work-item h4 {
-      margin-bottom: 0.5rem;
-      font-family: 'Lato', sans-serif;
-    }
-    .work-item p {
-      font-size: 0.95rem;
-      color: #555;
-      padding: 0 0.5rem 0 0;
-    }
-    .interests {
-      padding: 4rem 3rem;
-      text-align: center;
-      background-color: #eaeaea;
-    }
-    .interests h3 {
-      font-family: 'Lato', sans-serif;
-      font-weight: 600;
+
+    .icon {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .interests p.subheading {
-      color: #666;
-      font-size: 1rem;
-      margin-bottom: 3rem;
-    }
-    .interest-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .interest-item {
-      background: white;
-      padding: 2rem 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-    .interest-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    }
-    .interest-item .icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: block;
-      text-align: center;
-    }
-    .interest-item h4 {
-      margin-bottom: 0.5rem;
-      font-family: 'Lato', sans-serif;
-    }
-    .interest-item p {
-      font-size: 0.95rem;
-      color: #555;
-      padding: 0 0.5rem 0 0;
-    }
+
     footer {
       background-color: #000;
       color: white;
@@ -168,30 +166,34 @@
       font-family: 'Lato', sans-serif;
       font-weight: 600;
     }
+
     footer a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
     }
 
-    /* Mobile Styles */
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
         text-align: center;
         padding: 3rem 2rem;
       }
+
       .hero-text {
         max-width: 100%;
         margin-bottom: 2rem;
       }
+
       .hero img {
         width: 90%;
         max-width: 320px;
       }
+
       .work, .interests {
         padding: 3rem 2rem;
       }
+
       .work-grid, .interest-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -200,10 +202,17 @@
   </style>
 </head>
 <body>
-  
+
   <header>
     <h1>Shambhavi Chaturvedi</h1>
-    <nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <nav id="navLinks">
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -221,7 +230,7 @@
     <img src="shambhavi.jpg" alt="Shambhavi Chaturvedi" />
   </section>
 
-  <section class="work">
+ <section class="work">
     <h3>My Work</h3>
     <p class="subheading">Here’s a snapshot of my professional experience so far.</p>
     <div class="work-grid">
@@ -302,5 +311,11 @@
       <a href="mailto:shambhavichaturvedi97@gmail.com">Email</a>
     </p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
