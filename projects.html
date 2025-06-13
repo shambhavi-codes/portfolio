@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shambhavi | Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    header h1 {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.7rem;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+    h2 {
+      font-size: 2rem;
+      font-family: 'Lato', sans-serif;
+      margin-bottom: 2rem;
+    }
+    .project {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    .project-icon {
+      font-size: 2.5rem;
+      flex-shrink: 0;
+      margin-top: 0.3rem;
+    }
+    .project-content h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.3rem;
+      font-family: 'Lato', sans-serif;
+    }
+    .project-content p {
+      margin: 0;
+      color: #444;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #000;
+      color: white;
+      margin-top: 3rem;
+      font-family: 'Lato', sans-serif;
+    }
+    @media (max-width: 700px) {
+      .project {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shambhavi Chaturvedi</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>My Projects</h2>
+
+  <!-- Hershey Project -->
+  <div class="project">
+    <div class="project-icon">📊</div>
+    <div class="project-content">
+      <h3>Hershey – Data Analysis & Visualization</h3>
+      <p>Launched a deep-dive into consumer preferences to help Hershey shape the launch strategy for a new product. I uncovered the most responsive audience segments using exploratory and diagnostic analysis. Mid-campaign, I performed a KPI audit that revealed underperforming social traction. My strategic pivots led to a 20% increase in engagement. I visualized Time Series campaign benchmarks in Tableau, discovering a 200% lift in comparative performance—and helped Hershey double down on what worked.</p>
+    </div>
+  </div>
+
+  <!-- Amazon SQL Project -->
+  <div class="project">
+    <div class="project-icon">🧮</div>
+    <div class="project-content">
+      <h3>Amazon Dataset – SQL for Marketing Intelligence</h3>
+      <p>Dug into real-world Amazon datasets to find actionable insights. I built advanced SQL queries that spotlighted the highest-value customer cohorts and mapped their purchase patterns. Using funnel analysis and performance metrics, I revealed key drop-off points across marketing channels and created personas that guided campaign optimization.</p>
+    </div>
+  </div>
+
+  <!-- Hackathon Project -->
+  <div class="project">
+    <div class="project-icon">🏆</div>
+    <div class="project-content">
+      <h3>Mindshare Hackathon – Analytics Case Competition</h3>
+      <p>Leading Fordham’s team, I tackled a high-pressure analytics challenge where we modeled SUV sales trends using SPSS. Our proposal not only won the competition but also highlighted our ability to connect data-driven forecasting with a compelling marketing investment pitch. It was a proud moment in turning raw data into strategic success.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Shambhavi Chaturvedi </p>
+</footer>
+
+</body>
+</html>
