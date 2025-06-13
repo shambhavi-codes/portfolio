@@ -17,7 +17,6 @@
       color: white;
       padding: 1.8rem 3rem;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       font-size: 1.3rem;
@@ -27,10 +26,6 @@
       font-weight: 600;
       margin: 0;
       font-size: 2.3rem;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
     }
     nav a {
       color: white;
@@ -42,7 +37,6 @@
     }
     .hero {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       padding: 5rem 3rem;
@@ -50,7 +44,6 @@
     }
     .hero-text {
       max-width: 55%;
-      flex: 1 1 300px;
     }
     .hero-text h2 {
       font-family: 'Lato', sans-serif;
@@ -64,59 +57,108 @@
       color: #444;
     }
     .hero img {
-      max-width: 100%;
-      height: auto;
+      max-width: 380px;
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      flex: 1 1 250px;
     }
-    .work, .interests {
+    .work {
       padding: 4rem 3rem;
       text-align: center;
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: 0 auto 4rem auto;
     }
-    .work-grid, .interest-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-    .work-item, .interest-item {
-      background: white;
-      padding: 2rem 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-    .work-item:hover, .interest-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    }
-    .icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    h3 {
+    .work h3 {
       font-family: 'Lato', sans-serif;
       font-weight: 600;
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    p.subheading {
+    .work p.subheading {
       color: #666;
       font-size: 1rem;
       margin-bottom: 3rem;
     }
-    .work-item h4, .interest-item h4 {
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .work-item {
+      background: white;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center; /* Center all text inside work item */
+    }
+    .work-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+    .work-item .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+      text-align: center;
+    }
+    .work-item h4 {
       margin-bottom: 0.5rem;
       font-family: 'Lato', sans-serif;
     }
-    .work-item p, .interest-item p {
+    .work-item p {
       font-size: 0.95rem;
       color: #555;
-      padding: 0 0.5rem;
+      padding: 0 0.5rem 0 0;
+    }
+    .interests {
+      padding: 4rem 3rem;
+      text-align: center;
+      background-color: #eaeaea;
+    }
+    .interests h3 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .interests p.subheading {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .interest-item {
+      background: white;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center; /* Center all text inside interest item */
+    }
+    .interest-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+    .interest-item .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+      text-align: center;
+    }
+    .interest-item h4 {
+      margin-bottom: 0.5rem;
+      font-family: 'Lato', sans-serif;
+    }
+    .interest-item p {
+      font-size: 0.95rem;
+      color: #555;
+      padding: 0 0.5rem 0 0;
     }
     footer {
       background-color: #000;
@@ -131,26 +173,110 @@
       margin: 0 1rem;
       text-decoration: none;
     }
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .hero-text, .hero img {
-        max-width: 100%;
-        flex: unset;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav a {
-        margin: 1rem 1rem 0 0;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- Content remains unchanged -->
+  
+  <header>
+    <h1>Shambhavi Chaturvedi</h1>
+    <nav>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hi, I’m Shambhavi 👋</h2>
+      <p>
+        I love digging into data to find the story behind every marketing campaign. With experience in marketing mix modeling and media analysis, I help brands figure out what really moves the needle.<br><br>
+        I’m all about mixing creativity with numbers to make smarter decisions. When I’m not working, you’ll find me trying out new recipes, watching murder mystery and thriller movies, or exploring the outdoors with a good cup of coffee in hand.<br><br>
+        Let’s connect and chat about data, marketing, or just life!
+      </p>
+    </div>
+    <img src="shambhavi.jpg" alt="Shambhavi Chaturvedi" />
+  </section>
+
+  <section class="work">
+    <h3>My Work</h3>
+    <p class="subheading">Here’s a snapshot of my professional experience so far.</p>
+    <div class="work-grid">
+      <div class="work-item">
+        <div class="icon">🍷📊</div>
+        <h4>Senior Manager, Circana</h4>
+        <p>Crafting marketing mix models for BWS, CPG, and Retail industries. Specializing in ROI analytics, volume impact, and industry trends.</p>
+      </div>
+      <div class="work-item">
+        <div class="icon">👜✨</div>
+        <h4>Marketing Analyst Intern, Media Monks</h4>
+        <p>Worked on luxury brand campaigns—analyzing performance data, consumer engagement, and digital media activations at an agency.</p>
+      </div>
+      <div class="work-item">
+        <div class="icon">📚🔬</div>
+        <h4>Research Assistant, Fordham University</h4>
+        <p>Supported the Marketing Area Chair in behavioral research projects—conducting survey design, literature reviews, and data interpretation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="interests">
+    <h3>Areas of Interest</h3>
+    <p class="subheading">Take a look at some of the things I love working on.</p>
+    <div class="interest-grid">
+      <div class="interest-item">
+        <div class="icon">📊</div>
+        <h4>Marketing Mix Modeling</h4>
+        <p>Analyzing media spend and channel effectiveness to uncover ROI across platforms.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">☕</div>
+        <h4>Make Amazing Coffee</h4>
+        <p>Crafting the perfect cup as a daily ritual—equal parts science and soul.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">📐</div>
+        <h4>Statistical Analysis</h4>
+        <p>Diving into regression, correlations, and tests to find meaningful patterns in data.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">🔗</div>
+        <h4>Multi-Touch Attribution</h4>
+        <p>Mapping the customer journey across touchpoints to understand what truly drives conversions.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">💃</div>
+        <h4>Dance is Therapy</h4>
+        <p>Letting movement speak when words fall short—a joyful outlet and meditative practice.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">📈</div>
+        <h4>Data Visualization</h4>
+        <p>Turning insights into compelling dashboards and visual stories that guide decisions.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">⛰️</div>
+        <h4>Adventure Activities</h4>
+        <p>Exploring new heights through travel, hiking, and outdoor adrenaline bursts.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">🔍</div>
+        <h4>Data Cleaning</h4>
+        <p>Transforming raw, messy datasets into clean, reliable inputs for analysis and modeling.</p>
+      </div>
+      <div class="interest-item">
+        <div class="icon">💻</div>
+        <h4>Coding</h4>
+        <p>Writing Python and SQL scripts to automate workflows, model behavior, and wrangle data.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Connect with me:
+      <a href="https://www.linkedin.com/in/meetshambhavi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:shambhavichaturvedi97@gmail.com">Email</a>
+    </p>
+  </footer>
 </body>
 </html>
