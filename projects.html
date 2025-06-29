@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shambhavi | Projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -67,6 +68,16 @@
       color: #444;
       line-height: 1.6;
     }
+    .project-content a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #4078c0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .project-content a:hover {
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -97,6 +108,24 @@
 <div class="container">
   <h2>My Projects</h2>
 
+  <!-- Data Summarizing Project -->
+  <div class="project">
+    <div class="project-icon">📈</div>
+    <div class="project-content">
+      <h3>Data Summarizing Project – MMX Automation</h3>
+      <p>
+        A Python automation tool designed to streamline media data summarization for Marketing Mix Modeling (MMX). 
+        It processes Excel inputs to generate clean, structured summaries of impressions and spend by media driver type—enabling quick comparison of brand performance across two time periods. 
+        The tool also eased quality checks across multiple media drivers, reducing manual effort and helping teams meet tight project timelines.
+
+        <br><br>
+        <a href="https://github.com/shambhavi-codes/data-summary" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </p>
+    </div>
+  </div>
+
   <!-- Hershey Project -->
   <div class="project">
     <div class="project-icon">📊</div>
@@ -123,6 +152,7 @@
       <p>Leading Fordham’s team, I tackled a high-pressure analytics challenge where we modeled SUV sales trends using SPSS. Our proposal not only won the competition but also highlighted our ability to connect data-driven forecasting with a compelling marketing investment pitch. It was a proud moment in turning raw data into strategic success.</p>
     </div>
   </div>
+
 </div>
 
 <footer>
