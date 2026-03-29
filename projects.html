@@ -78,6 +78,21 @@
     .project-content a:hover {
       text-decoration: underline;
     }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .tag {
+      background: #f0f4ff;
+      color: #4078c0;
+      border-radius: 20px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      font-family: 'Lato', sans-serif;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -108,21 +123,57 @@
 <div class="container">
   <h2>My Projects</h2>
 
-  <!-- Data Summarizing Project -->
+  <!-- MMX Automation Project — UPDATED -->
   <div class="project">
     <div class="project-icon">📈</div>
     <div class="project-content">
-      <h3>Data Summarizing Project – MMX Automation</h3>
+      <h3>Data Cleaning & MMX Automation Tool</h3>
       <p>
-        A Python automation tool designed to streamline media data summarization for Marketing Mix Modeling (MMX). 
-        It processes Excel inputs to generate clean, structured summaries of impressions and spend by media driver type—enabling quick comparison of brand performance across two time periods. 
-        The tool also eased quality checks across multiple media drivers, reducing manual effort and helping teams meet tight project timelines.
-
-        <br><br>
-        <a href="https://github.com/shambhavi-codes/data-summary" target="_blank">
-          <i class="fab fa-github"></i> View on GitHub
-        </a>
+        Developed a Python-based automation tool to dynamically restructure client media data
+        and run automated QA validation checks across 10+ concurrent projects.
+        The tool processes Excel inputs to generate clean, structured summaries of impressions
+        and spend by media driver type — enabling quick comparison of brand performance across
+        time periods. By eliminating repetitive manual preparation and embedding quality checks
+        directly into the workflow, the tool accelerated model readiness by 80%, improved model
+        accuracy by 60%, and cut manual preparation time by 8 hours per study.
       </p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Automation</span>
+        <span class="tag">QA Validation</span>
+        <span class="tag">MMX</span>
+        <span class="tag">Excel</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW SQL Project -->
+  <div class="project">
+    <div class="project-icon">🗄️</div>
+    <div class="project-content">
+      <h3>MMM Media Data Pipeline — SQL</h3>
+      <p>
+        Engineered a SQL data wrangling pipeline to clean, standardize, and consolidate
+        weekly media data across 3 drivers — Paid Social (Facebook & Instagram), Digital Video
+        (YouTube), and Paid Search (Google Search) — into a single unified dataset using
+        UNION ALL and reusable SQL views. The pipeline ingests raw platform CSV exports,
+        resolves inconsistent column structures across sources, and delivers 416 rows of
+        analysis-ready data covering 104 weeks (2 years), reducing data preparation time
+        and enabling the modeling team to access clean data without manual query rebuilding.
+        All data used is anonymized; the pipeline replicates the logic and workflow of real
+        MMM data preparation without exposing any client information.
+      </p>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">UNION ALL</span>
+        <span class="tag">Data Pipeline</span>
+        <span class="tag">MMM</span>
+        <span class="tag">CSV Import</span>
+      </div>
+      <a href="https://github.com/shambhavi-codes/mmm-media-pipeline" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
     </div>
   </div>
 
@@ -131,7 +182,20 @@
     <div class="project-icon">📊</div>
     <div class="project-content">
       <h3>Hershey – Data Analysis & Visualization</h3>
-      <p>Launched a deep-dive into consumer preferences to help Hershey shape the launch strategy for a new product. I uncovered the most responsive audience segments using exploratory and diagnostic analysis. Mid-campaign, I performed a KPI audit that revealed underperforming social traction. My strategic pivots led to a 20% increase in engagement. I visualized Time Series campaign benchmarks in Tableau, discovering a 200% lift in comparative performance—and helped Hershey double down on what worked.</p>
+      <p>
+        Launched a deep-dive into consumer preferences to help Hershey shape the launch
+        strategy for a new product. Uncovered the most responsive audience segments using
+        exploratory and diagnostic analysis. Mid-campaign, performed a KPI audit that revealed
+        underperforming social traction. Strategic pivots led to a 20% increase in engagement.
+        Visualized Time Series campaign benchmarks in Tableau, discovering a 200% lift in
+        comparative performance — and helped Hershey double down on what worked.
+      </p>
+      <div class="tags">
+        <span class="tag">Tableau</span>
+        <span class="tag">KPI Analysis</span>
+        <span class="tag">Time Series</span>
+        <span class="tag">Consumer Insights</span>
+      </div>
     </div>
   </div>
 
@@ -140,7 +204,17 @@
     <div class="project-icon">🧮</div>
     <div class="project-content">
       <h3>Amazon Dataset – SQL for Marketing Intelligence</h3>
-      <p>Dug into real-world Amazon datasets to find actionable insights. I built advanced SQL queries that spotlighted the highest-value customer cohorts and mapped their purchase patterns. Using funnel analysis and performance metrics, I revealed key drop-off points across marketing channels and created personas that guided campaign optimization.</p>
+      <p>
+        Dug into real-world Amazon datasets to find actionable insights. Built advanced SQL
+        queries that spotlighted the highest-value customer cohorts and mapped their purchase
+        patterns. Using funnel analysis and performance metrics, revealed key drop-off points
+        across marketing channels and created personas that guided campaign optimization.
+      </p>
+      <div class="tags">
+        <span class="tag">SQL</span>
+        <span class="tag">Funnel Analysis</span>
+        <span class="tag">Customer Segmentation</span>
+      </div>
     </div>
   </div>
 
@@ -149,14 +223,24 @@
     <div class="project-icon">🏆</div>
     <div class="project-content">
       <h3>Mindshare Hackathon – Analytics Case Competition</h3>
-      <p>Leading Fordham’s team, I tackled a high-pressure analytics challenge where we modeled SUV sales trends using SPSS. Our proposal not only won the competition but also highlighted our ability to connect data-driven forecasting with a compelling marketing investment pitch. It was a proud moment in turning raw data into strategic success.</p>
+      <p>
+        Leading Fordham's team, tackled a high-pressure analytics challenge where we modeled
+        SUV sales trends using SPSS. Our proposal not only won the competition but also
+        highlighted our ability to connect data-driven forecasting with a compelling marketing
+        investment pitch — turning raw data into strategic success.
+      </p>
+      <div class="tags">
+        <span class="tag">SPSS</span>
+        <span class="tag">Forecasting</span>
+        <span class="tag">Case Competition</span>
+      </div>
     </div>
   </div>
 
 </div>
 
 <footer>
-  <p>© 2025 Shambhavi Chaturvedi </p>
+  <p>© 2025 Shambhavi Chaturvedi</p>
 </footer>
 
 </body>
